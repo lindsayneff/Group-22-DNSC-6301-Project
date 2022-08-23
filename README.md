@@ -4,11 +4,11 @@
 
 ### Basic Information
 
-* **Person or organization developing model**: Patrick Hall, `jphall@gwu.edu`
-* **Model date**: August, 2021
+* **Person or organization developing model**: Katie McQuiddy, Lindsay Neff, Mallika Yadav, Wenxuan Xue, `kmcquiddy@gwu.edu`,`lneff22@gwu.edu`,`mallika@gwu.edu`,`wenxuan.xue@gwu.edu`
+* **Model date**: August 27, 2022
 * **Model version**: 1.0
 * **License**: MIT
-* **Model implementation code**: [DNSC_6301_Example_Project.ipynb](DNSC_6301_Example_Project.ipynb)
+* **Model implementation code**: [DNSC-6301-Project.ipynb](DNSC-6301-Project.ipynb)
 
 ### Intended Use
 * **Primary intended uses**: This model is an *example* probability of default classifier, with an *example* use case for determining eligibility for a credit line increase.
@@ -63,6 +63,14 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        random_state=12345, splitter='best')`
 ```
 ### Quantitative Analysis
-
 #### Correlation Heatmap
-![Correlation Heatmap](download.png)
+![image](https://user-images.githubusercontent.com/111469896/186174958-6faa4ef6-80bc-492e-b1de-5138dd9d7b87.png)
+
+#### Iteration Plot: Model 1 (Does not account for bias)
+![image](https://user-images.githubusercontent.com/111469896/186173934-7fca1ecb-4505-441b-8218-d485cdf27b80.png)
+
+* **Model Depth, Training AUC, Validation AUC, 5-Fold SD Score**: Depth: 6, Training AUC: 0.783722, Validation AUC: 0.749610, 5 Fold SD Score: 0.017665
+* **Justification for Model Selection**: ADD IN INFORMATION
+
+####
+
