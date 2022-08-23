@@ -8,7 +8,7 @@
 * **Model date**: August 27, 2022
 * **Model version**: 1.0
 * **License**: MIT
-* **Model implementation code**: [DNSC-6301-Project.ipynb](DNSC-6301-Project.ipynb)
+* **Model implementation code**: [https://github.com/lindsayneff/Group-22-DNSC-6301-Project/blob/main/DNSC_6301_Project.ipynb](DNSC-6301-Project.ipynb)
 
 ### Intended Use
 * **Primary intended uses**: This model is an *example* probability of default classifier, with an *example* use case for determining eligibility for a credit line increase.
@@ -66,11 +66,16 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Correlation Heatmap
 ![image](https://user-images.githubusercontent.com/111469896/186174958-6faa4ef6-80bc-492e-b1de-5138dd9d7b87.png)
 
-#### Iteration Plot: Model 1 (Does not account for bias)
-![image](https://user-images.githubusercontent.com/111469896/186173934-7fca1ecb-4505-441b-8218-d485cdf27b80.png)
+#### Iteration Plot: Final Model 
+![image](https://user-images.githubusercontent.com/111469896/186176145-4f4bd87c-b0dd-4bea-b3e2-53b9f9666e5d.png)
 
-* **Model Depth, Training AUC, Validation AUC, 5-Fold SD Score**: Depth: 6, Training AUC: 0.783722, Validation AUC: 0.749610, 5 Fold SD Score: 0.017665
-* **Justification for Model Selection**: ADD IN INFORMATION
+
+* **Model Depth**: 6
+* **Training AUC**: 0.783722
+* **Validation AUC**: 0.749610
+* **5-Fold SD Score**: 0.017665
+* **AIR Score**: 0.833205
+* **Justification for Model Selection**: The iteration plot demonstrates peak model fairness, judged by the Hispanic to White AIR curve between a tree depth of 6 or 7. In this segment, accuracy also peaks, as shown by the validation AUC curve around a depth of 6. Both of these scores indicate that a tree of depth 6 or 7 could be considered as the final model. For the purposes of this project, a final model of depth 6 was selected, prioritizing slight accuracy over fairness as the model of depth 7 demonstrated slightly higher fairness with a higher Hispanic to White AIR score of 0.835886, but a lower validation AUC score of 0.742115. 
 
 ####
 
