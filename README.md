@@ -77,5 +77,14 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 * **AIR Score**: 0.833205
 * **Justification for Model Selection**: The iteration plot demonstrates peak model fairness, judged by the Hispanic to White AIR curve between a tree depth of 6 or 7. In this segment, accuracy also peaks, as shown by the validation AUC curve around a depth of 6. Both of these scores indicate that a tree of depth 6 or 7 could be considered as the final model. For the purposes of this project, a final model of depth 6 was selected, prioritizing slight accuracy over fairness as the model of depth 7 demonstrated slightly higher fairness with a higher Hispanic to White AIR score of 0.835886, but a lower validation AUC score of 0.742115. 
 
-####
+### Ethical Considerations:
+#### Potential negative impacts of using model:
+* ADD MORE:
+* used for credit lending and has racial bias (accounted for but still present)
+* AIR just meets guidelines, not necessarily a good score if just hitting 80
+* does not consider intersectional protected groups -- extremely one dimensional in only considering race as one identity group or gender alone rather than the compound impact of race, gender, sexuality, religion and other demographic factors that interact to form a person's lived experience. The failure to consider intersectional groups could result in further marginalization and has real life implications for wealth accummulation in the US.
+* Math or software considerations: the cutoff used could be changed which would change lending behavior, there could also be changes in the split of training, testing, and validation. There is not an indication of how the three datasets are split so a random split might not be useful, would prefer splitting by using most recent data for testing rather than training.
+#### Potential Uncertainties:
+* again uncertainty with respect to how the model performs on certain identity intersections. Protected groups are only tested to one dimension
+* Model data could be improved in prediction of credit delinquency. The model does not indicate whether certain factors in the economy or natural events could contribute to credit delinquency or failure to pay bills for certain year or time periods. For example, a unique effect like the global pandemic could affect ability to pay or past payment behavior. An event like this might not be indicative of overall credit history but would not be accounted for in the model. If used for lending, humans should consider external factors which might immpact behavior.
 
