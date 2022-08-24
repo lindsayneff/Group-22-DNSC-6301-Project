@@ -68,6 +68,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Iteration Plot: Final Model 
 ![image](https://user-images.githubusercontent.com/111469896/186176145-4f4bd87c-b0dd-4bea-b3e2-53b9f9666e5d.png)
+* **Plot Description**: The above plot demonstrates the AUC lines for both training and validation data as well as the AIR curve for Hispanic-White selection. The training data approaches values close to one, which indicate that increases in model depth potentially can cause overfittin of the model using training data. This is made apparent as the validation AUC peaks and then drops off and becomes downward sloping. The AIR score for hispanic to white was selected because it initially had a low level which fell below .80 ratio guidelines for adverse selection. It is necessary to select a model depth with a ratio above .80 with possible choices made clear in the above graph.
 
 
 * **Model Depth**: 6
