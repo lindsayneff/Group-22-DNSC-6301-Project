@@ -88,4 +88,5 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Potential Uncertainties:
 * again uncertainty with respect to how the model performs on certain identity intersections. Protected groups are only tested to one dimension
 * Model data could be improved in prediction of credit delinquency. The model does not indicate whether certain factors in the economy or natural events could contribute to credit delinquency or failure to pay bills for certain year or time periods. For example, a unique effect like the global pandemic could affect ability to pay or past payment behavior. An event like this might not be indicative of overall credit history but would not be accounted for in the model. If used for lending, humans should consider external factors which might immpact behavior.
-
+#### Any Unexpected or Results:
+* Focus on a single dimension of a specific group, resulting in future credit data collection and processing results are not universal, which is not conducive to the perpetual development of this model card. 
