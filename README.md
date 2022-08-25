@@ -90,3 +90,13 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 * Model data could be improved in prediction of credit delinquency. The model does not indicate whether certain factors in the economy or natural events could contribute to credit delinquency or failure to pay bills for certain year or time periods. For example, a unique effect like the global pandemic could affect ability to pay or past payment behavior. An event like this might not be indicative of overall credit history but would not be accounted for in the model. If used for lending, humans should consider external factors which might immpact behavior.
 #### Any Unexpected or Results:
 * Focus on a single dimension of a specific group, resulting in future credit data collection and processing results are not universal, which is not conducive to the perpetual development of this model card. 
+
+##Ethical considerations (6 pts.):
+○ Describe potential negative impacts of using your model:
+The model should take into consideration credit score history of an individual and not only focus on the payment  history that for many reasons might change according to recent situations.
+
+1.The goal of the model is to reduce bias, however that could only be achieved by thoughtful inputs when evaluating the credit line increase.Currently, model pose risk to minority group due to inherent bias in the model.
+
+2.The model may deny credit and future financial service access to potential candidate due to current payment model.
+
+3.The model in itself is not sufficient to draw any conclusion for credit line increase and any policy changes shall reap no benefits to the company and might lead to loose customer base in future.
