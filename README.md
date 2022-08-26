@@ -4,7 +4,7 @@
 
 ### Basic Information
 
-* **Person or organization developing model**: Katie McQuiddy, Lindsay Neff, Mallika Yadav, Wenxuan Xue, `kmcquiddy@gwu.edu`,`lneff22@gwu.edu`,`mallika@gwu.edu`,`wenxuan.xue@gwu.edu`
+* **Person or organization developing model**: Katie, Lindsay, Mallika, Wenxuan, `kmcquiddy@edu`,`lneff@edu`,`mallika@edu`,`wenxuan@edu`
 * **Model date**: August 27, 2022
 * **Model version**: 1.0
 * **License**: MIT
@@ -66,12 +66,13 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 ### Quantitative Analysis
 #### Correlation Heatmap
 ![image](https://user-images.githubusercontent.com/111469896/186174958-6faa4ef6-80bc-492e-b1de-5138dd9d7b87.png)
+* **Heatmap Description**: Visual representation of Pearson correlation matrix. Plot shows the correlation between all variables with darker colors indicating high negative correlation while lighter colors indicate strong positive correlation. Notable correlations include the race-credit_delinq correlation which is highly negatively correlated.
 
 #### Iteration Plot: Final Model 
 ![image](https://user-images.githubusercontent.com/111469896/186176145-4f4bd87c-b0dd-4bea-b3e2-53b9f9666e5d.png)
-* **Plot Description**: The above plot demonstrates the AUC lines for both training and validation data as well as the AIR curve for Hispanic-White selection. The training data approaches values close to one, which indicate that increases in model depth potentially can cause overfittin of the model using training data. This is made apparent as the validation AUC peaks and then drops off and becomes downward sloping. The AIR score for hispanic to white was selected because it initially had a low level which fell below 0.80 ratio guidelines for adverse selection. It is necessary to select a model depth with a ratio above 0.80 with possible choices made clear in the above graph.
+* **Plot Description**: The above plot demonstrates the AUC lines for both training and validation data as well as the AIR curve for Hispanic-White selection. The training data approaches values close to one, which indicate that increases in model depth potentially can cause overfitting of the model using training data. This is made apparent as the validation AUC peaks and then drops off and becomes downward sloping. The AIR score for hispanic to white was selected because it initially had a low level which fell below 0.80 ratio guidelines for adverse selection. It is necessary to select a model depth with a ratio above 0.80 with possible choices made clear in the above graph.
 
-
+#### Metrics Used to Evaluate Final Model:
 * **Model Depth**: 6
 * **Training AUC**: 0.783722
 * **Validation AUC**: 0.749610
@@ -89,7 +90,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Potential Uncertainties:
 * again uncertainty with respect to how the model performs on certain identity intersections. Protected groups are only tested to one dimension
 * Model data could be improved in prediction of credit delinquency. The model does not indicate whether certain factors in the economy or natural events could contribute to credit delinquency or failure to pay bills for certain year or time periods. For example, a unique effect like the global pandemic could affect ability to pay or past payment behavior. An event like this might not be indicative of overall credit history but would not be accounted for in the model. If used for lending, humans should consider external factors which might immpact behavior.
-#### Any Unexpected or Results:
+#### Any Unexpected Results:
 * Focus on a single dimension of a specific group, resulting in future credit data collection and processing results are not universal, which is not conducive to the perpetual development of this model card. 
 
 ##Ethical considerations (6 pts.):
