@@ -83,7 +83,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 ### Ethical Considerations:
 #### Potential negative impacts of using model:
 * ADD MORE:
-* used for credit lending and has racial bias (accounted for but still present)
+* Used for credit lending and has racial bias (accounted for but still present)
 * AIR just meets guidelines, not necessarily a good score if just hitting 80
 * Does not consider intersectional protected groups -- extremely one dimensional in only considering race as one identity group or gender alone rather than the compound impact of race, gender, sexuality, religion and other demographic factors that interact to form a person's lived experience. The failure to consider intersectional groups could result in further marginalization and has real life implications for wealth accummulation in the US.
 * **Math or software considerations**: the cutoff used could be changed which would change lending behavior, there could also be changes in the split of training, testing, and validation. There is not an indication of how the three datasets are split so a random split might not be useful, would prefer splitting by using most recent data for testing rather than training.
