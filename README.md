@@ -60,7 +60,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        max_depth=6, max_features=None, max_leaf_nodes=None,
                        min_impurity_decrease=0.0, min_impurity_split=None,
                        min_samples_leaf=1, min_samples_split=2,
-                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       min_weight_fraction_leaf=0.0,
                        random_state=12345, splitter='best')`
 ```
 ### Quantitative Analysis
@@ -76,6 +76,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 * **Model Depth**: 6
 * **Training AUC**: 0.783722
 * **Validation AUC**: 0.749610
+* **Test AUC**: 0.7438
 * **5-Fold SD Score**: 0.017665
 * **AIR Score**: 0.833205
 * **Accuracy at Cutoff 0.18 for Confusion Matrix**: 0.7384
