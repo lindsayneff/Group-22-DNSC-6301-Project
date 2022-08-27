@@ -78,18 +78,19 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 * **Validation AUC**: 0.749610
 * **5-Fold SD Score**: 0.017665
 * **AIR Score**: 0.833205
+* **Accuracy at Cutoff 0.18 for Confusion Matrix**: 0.7384
 * **Justification for Model Selection**: The iteration plot demonstrates peak model fairness, judged by the Hispanic to White AIR curve between a tree depth of 6 or 7. In this segment, accuracy also peaks, as shown by the validation AUC curve around a depth of 6. Both of these scores indicate that a tree of depth 6 or 7 could be considered as the final model. For the purposes of this project, a final model of depth 6 was selected, prioritizing slight accuracy over fairness as the model of depth 7 demonstrated slightly higher fairness with a higher Hispanic to White AIR score of 0.835886, but a lower validation AUC score of 0.742115. 
 
 ### Ethical Considerations:
 #### Potential negative impacts of using model:
-* **Math or software considerations**: the cutoff used could be changed which would change lending behavior, there could also be changes in the split of training, testing, and validation. There is not an indication of how the three datasets are split so a random split might not be useful, would prefer splitting by using most recent data for testing rather than training.
-* **Real world risks**:
-* 
-* ADD MORE:* (Synthesize below)
+* **Math or software considerations**: 
+* The model was evaluated using a 0.18 probability cutoff for lending, meaning those with a 0.18 or smaller probability of default will be extended credit while those with predicted values above would not be extended credit. This cutoff could be changed depending on the firms desired cutoff range. While higher cutoffs would result in increased accuracy of the model, the resulting impact would be increased lending which could be a negative impact for the firm but not consumers. Conversely, firms could lower the desired cutoff range of lending, resulting in decreased accuracy and less lending.
+* An additional math or software consideration is the split of training, testing, and validation data. Currently, the model divides data using a random seed which divides training data as 50% of the data and validation and testing as 25% each. While the split is appropriate for model development, depending on the data in each segment there could be changes in the model. Typically it is desirable to use past data for training and more current data for testing. If the split used in this model happens to use past data to test the model, it might overestimate the success of the model. 
 
-* Used for credit lending and has racial bias (accounted for but still present)
-* AIR just meets guidelines, not necessarily a good score if just hitting 80
-* Does not consider intersectional protected groups -- extremely one dimensional in only considering race as one identity group or gender alone rather than the compound impact of race, gender, sexuality, religion and other demographic factors that interact to form a person's lived experience. The failure to consider intersectional groups could result in further marginalization and has real life implications for wealth accummulation in the US.
+* **Real world risks**:
+* Although the model scores relatively well, the model could be used for credit lending and still has racial bias. Despite ensuring that the final model scores above 0.80 for protected groups AIR and has an appropriate fairness score, this measure of selection is not necessarily a good score if just hitting the .80 threshold. This still indicates that there is bias in the model and those protected groups could be prevented from accessing credit.
+* Additionally, the model does not consider intersectional protected groups and is extremely one dimensional in its evaluation of bias. The confusion matrices and subsequent AIR scores are only considered for single identity groups. This proves to be an issue to only evaluate race alone or gender alone rather than the compound impact of race, gender, sexuality, religion, socioeconomic status, ability etc and other factors which interact to form a person's lived experience. The failure to consider intersectional groups and the ways that the model deems their credit worthiness could result in further marginalization and has real life implications for wealth accummulation in the US for those individuals.
+
 
 #### Potential Uncertainties:
 * **Math or software considerations**:
